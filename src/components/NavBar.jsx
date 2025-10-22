@@ -18,7 +18,7 @@ export default function NavBar() {
   return (
     <nav className="navBar">
       <div className="navTopo">
-        <h1 className="tituloSite">Portal Da História</h1>
+        <h1 className="tituloSite">Estação Meterológica</h1>
         <div className="tituloComBotao">
           <i
             className={menuAberto ? "bx bx-menu-alt-right" : "bx bx-menu"}
