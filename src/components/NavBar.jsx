@@ -1,24 +1,34 @@
 // components/NavBar.jsx
-import { Link } from "react-router-dom"; 
+import { Link, useLocation } from "react-router-dom"; 
 import { useState } from "react"; 
 import "./NavBar.css"; 
 import BotaoMudarTema from "./botaoMudaTema"; 
 
 export default function NavBar() {
   const [menuAberto, setMenuAberto] = useState(false);
+  const location = useLocation(); // pega a rota atual
 
-  const alternarMenu = () => {
-    setMenuAberto(!menuAberto);
+  const alternarMenu = () => setMenuAberto(!menuAberto);
+  const handleClick = () => setMenuAberto(false);
+
+  // Map de rotas para títulos
+  const titulos = {
+    "/": "Página Principal",
+     "/o-projeto": "O Projeto",
+    "/simulacao-wokwi": "Simulação Wokwi",
+    "/hardware": "Hardware",
+    "/software": "Software",
+    "/perguntas-respostas": "Perguntas e Respostas",
+    "/resultados": "Resultados",
+    "/equipe": "Equipe",
   };
 
-  const handleClick = () => {
-    setMenuAberto(false);
-  };
+  const tituloAtual = titulos[location.pathname] || "Estação Meterológica";
 
   return (
     <nav className="navBar">
       <div className="navTopo">
-        <h1 className="tituloSite">Estação Meterológica</h1>
+        <h1 className="tituloSite">{tituloAtual}</h1>
         <div className="tituloComBotao">
           <i
             className={menuAberto ? "bx bx-menu-alt-right" : "bx bx-menu"}
