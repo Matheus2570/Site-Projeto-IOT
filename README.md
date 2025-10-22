@@ -114,8 +114,9 @@ O objetivo foi criar uma **estação meteorológica inteligente** utilizando o *
 <p align="center">
   <img src="https://github.com/Matheus2570/Site-Projeto-IOT/blob/ac4a990c620d756baca5f7856596e6b32957d1f7/CapivaraEstimacao.png" alt="Capivara IoT" width="450px">
 </p>
-> Nossa capivara de estimação mexendo na estação meteorológica IoT dentro da fábrica 🏭💨  
-> Ela cuida da medição dos sensores e garante um ambiente saudável e tecnológico 🌡️📶  
+
+- Nossa capivara de estimação mexendo na estação meteorológica IoT dentro da fábrica 🏭💨  
+- Ela cuida da medição dos sensores e garante um ambiente saudável e tecnológico 🌡️📶  
 
 ---
 
