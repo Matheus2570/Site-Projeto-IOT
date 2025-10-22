@@ -1,0 +1,79 @@
+/* Fundo geral da página (sem cor) */
+.simulacao-page {
+  font-family: 'Times New Roman', Times, serif;
+  padding-bottom: 60px;
+}
+
+/* Seção principal do circuito */
+.simulacao-circuito {
+  background-color: rgba(144, 163, 174, 0.2);
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border-radius: 12px;
+}
+
+/* Título da seção */
+.simulacao-circuito h2 {
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+/* Container do conteúdo (texto + imagem) */
+.simulacao-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Bloco de texto */
+.simulacao-texto {
+  text-align: left;
+  max-width: 500px;
+}
+
+/* Bloco da imagem */
+.simulacao-imagem {
+  width: 280px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.simulacao-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Seção de componentes */
+.simulacao-componentes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Bloco de componentes e link */
+.simulacao-texto, .simulacao-link {
+  background-color: rgba(144, 163, 174, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Link do projeto */
+.simulacao-link {
+  max-width: 350px;
+  text-align: center;
+}
+
+.simulacao-link a {
+  text-decoration: none;
+}
