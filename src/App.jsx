@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// Importação das páginas
+import Home from "./pages/home";
+import OProjeto from "./pages/oProjeto";
+import SimulacaoWokwi from "./pages/simulacaoWokwi";
+import Hardware from "./pages/hardware";
+import Software from "./pages/software";
+import PerguntasRespostas from "./pages/perguntasRespostas";
+import Resultados from "./pages/resultados";
+import Equipe from "./pages/equipe";
+
+// Importação dos componentes
+import NavBar from "./components/NavBar";
+import Footer from "./components/footer";
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/o-projeto" element={<OProjeto />} />
+        <Route path="/simulacao-wokwi" element={<SimulacaoWokwi />} />
+        <Route path="/hardware" element={<Hardware />} />
+        <Route path="/software" element={<Software />} />
+        <Route path="/perguntas-respostas" element={<PerguntasRespostas />} />
+        <Route path="/resultados" element={<Resultados />} />
+        <Route path="/equipe" element={<Equipe />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
