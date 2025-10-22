@@ -72,7 +72,7 @@
   max-height: 600px;   /* altura máxima */
   border-radius: 8px;
 
-  margin-bottom: 5%;
+  margin-bottom: 10%;
   
 }
 
@@ -122,6 +122,11 @@
   .r-learn-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .r-video {
+
+    margin-bottom: 30%;
+  }
 }
 
 @media (max-width: 760px) {
@@ -137,5 +142,6 @@
 
   .r-video {
     max-height: 320px;
+    margin-bottom: 30%;
   }
 }
