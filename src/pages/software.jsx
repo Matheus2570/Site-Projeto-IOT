@@ -26,7 +26,10 @@ export default function Software() {
         <ol>
           <li>
             <strong>Instalação do Suporte ao ESP32:</strong> Em <strong>Arquivo → Preferências</strong>, adicione a URL do gerenciador de placas ESP32: <br />
-            <code>https://dl.espressif.com/dl/package_esp32_index.json</code>
+           <pre className="code-link">
+  <code>https://dl.espressif.com/dl/package_esp32_index.json</code>
+</pre>
+
           </li>
           <li>
             <strong>Instalação da Placa ESP32:</strong> Acesse <strong>Ferramentas → Placa → Gerenciador de Placas</strong>, busque por "ESP32" e instale o pacote <strong>esp32 by Espressif Systems</strong>.
