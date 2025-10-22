@@ -6,13 +6,16 @@
 
 /* Seção principal do circuito */
 .simulacao-circuito {
+  max-width: 1000px;   
+  margin: 2% auto 0 auto; 
   background-color: rgba(144, 163, 174, 0.2);
-  padding: 60px 20px;
+  padding: 60px 30px; 
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 40px;
   border-radius: 12px;
+
 }
 
 /* Título da seção */
