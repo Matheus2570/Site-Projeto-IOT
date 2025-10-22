@@ -1,11 +1,11 @@
 import React from "react";
 import "./resultados.css";
-import gasVideo from "../assets/videotodo.mp4"
+import gasVideo from "../assets/videotodo.mp4";
 
 const mensagens = [
   {
     id: "m1",
-    header: " IoT na Prática",
+    header: "IoT na Prática",
     text:
       "Compreendemos como dispositivos IoT funcionam no mundo real, desde a coleta de dados com sensores até a transmissão via internet. A experiência prática solidificou conceitos teóricos de conectividade e comunicação M2M (Machine-to-Machine).",
   },
@@ -17,22 +17,18 @@ const mensagens = [
   },
   {
     id: "m3",
-    header: " Aplicação Multidisciplinar",
+    header: "Aplicação Multidisciplinar",
     text:
       "Unificamos conhecimentos de Sistemas Operacionais (gerenciamento de processos), Redes (protocolos e arquitetura), Programação (algoritmos e lógica) e Engenharia de Software (requisitos e testes) em um único projeto prático.",
   },
 ];
 
-
 export default function Resultados() {
   return (
     <main className="r-container">
-      <div className="r-topbar" />
-
-      
+      {/* ====== Aprendizados ====== */}
       <section className="r-section r-learn">
         <h2 className="r-section-title">PRINCIPAIS APRENDIZADOS</h2>
-
         <div className="r-learn-grid">
           {mensagens.map((m) => (
             <article key={m.id} className="r-card">
@@ -41,19 +37,20 @@ export default function Resultados() {
             </article>
           ))}
         </div>
-
       </section>
 
-
-
+      {/* ====== Vídeo do Sensor ====== */}
       <section className="r-section r-video">
         <h2 className="r-section-title">TESTE DO SENSOR DE GÁS</h2>
         <div className="r-video-wrap">
-          <video className="r-video" src={gasVideo} controls preload="metadata" />
+          <video
+            className="r-video"
+            src={gasVideo}
+            controls
+            preload="metadata"
+          />
         </div>
       </section>
-
-     
     </main>
   );
 }
