@@ -1,0 +1,209 @@
+/* ====== Container principal isolado ====== */
+.arduino-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+/* ====== Seções ====== */
+.section {
+  width: 80%;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.section p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* ====== Cores das seções ====== */
+.ide-arduino {
+  background-color: rgba(134, 164, 171, 0.546);
+}
+
+.config-ide {
+  background-color: rgba(213, 233, 237, 0.884);
+}
+
+.board-porta {
+  background-color: rgba(124, 124, 124, 0.2);
+}
+
+/* ====== Bloquinhos ====== */
+.bloquinhos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.bloquinho1,
+.bloquinho2 {
+  background-color: rgba(255, 255, 255, 0.386);
+  padding: 10px;
+  border-radius: 8px;
+  width: 40%;
+  min-width: 260px;
+}
+
+/* ====== Listas ====== */
+.section ol {
+  color: #333;
+  margin-left: 20px;
+}
+
+.section ul li,
+.section ol li {
+  margin-bottom: 6px;
+}
+
+/* ====== Destaques ====== */
+.arduino-page code {
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+.arduino-page .highlight {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-family: monospace;
+  display: inline-block;
+  margin: 6px 0;
+}
+
+/* ====== Bloco de Código Fonte ====== */
+.codigo-fonte {
+  width: 80%;
+  max-width: 900px;
+  padding: 5%;
+}
+
+.codigo-fonte h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.arduino-page .codigo-box {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 4%;
+  overflow-x: auto; /* rolagem horizontal para códigos longos */
+}
+
+.arduino-page .codigo-box button {
+  background-color: #508c96;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.arduino-page .codigo-box button:hover {
+  background-color: #3e7179;
+}
+
+/* ====== Texto de rodapé do bloco ====== */
+.arduino-page .codigo-box p {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  font-style: italic;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.arduino-page .codigo-box p:hover {
+  text-decoration: underline;
+}
+
+/* ====== Responsividade ====== */
+
+/* Telas médias (tablets) */
+@media (max-width: 900px) {
+  .section {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .section h2 {
+    font-size: 1.4rem;
+  }
+
+  .bloquinho1,
+  .bloquinho2 {
+    width: 45%;
+  }
+}
+
+/* Telas pequenas (celulares) */
+@media (max-width: 600px) {
+  .arduino-page {
+    gap: 30px;
+    padding: 20px 0;
+  }
+
+  .section {
+    width: 95%;
+    padding: 16px;
+  }
+
+  .section h2 {
+    font-size: 1.2rem;
+  }
+
+  .section p,
+  .section li {
+    font-size: 0.95rem;
+  }
+
+  .bloquinhos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bloquinho1,
+  .bloquinho2 {
+    width: 90%;
+  }
+
+  .codigo-fonte {
+    width: 95%;
+    padding: 16px;
+  }
+
+  .codigo-fonte h1 {
+    font-size: 1.4rem;
+  }
+.arduino-page code {
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+  .arduino-page .codigo-box button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
