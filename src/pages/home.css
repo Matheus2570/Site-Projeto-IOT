@@ -1,0 +1,143 @@
+.home-container {
+  text-align: center;
+}
+
+/* Objetivo do Projeto */
+.objetivo-projeto h2 {
+  margin-top: 40px;
+  font-size: 2em;
+}
+
+.bloco-objetivo {
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 1.1em;
+  padding: 20px;
+  background-color: rgba(144, 163, 174, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center; /* padrão centralizado */
+}
+
+.integracao-multidisciplinar {
+  border-radius: 15px;
+  width: 80%;
+  padding: 50px 0;
+  background-color: rgba(144, 163, 174, 0.2);
+  box-sizing: border-box;
+  margin: 0 auto 20px auto; /* centraliza horizontalmente */
+  display: flex;
+  flex-direction: column; /* mantém o título e os blocos em coluna */
+  align-items: center; /* centraliza os elementos internos */
+}
+
+
+.integracao-multidisciplinar h2 {
+  margin-top: 0;
+  font-size: 2em;
+  text-align: center;
+}
+
+.blocos-integracao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.blocos-integracao .bloco {
+  flex: 1 1 220px;
+  max-width: 220px;
+  padding: 20px;
+  background-color: rgba(144, 163, 174, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  text-align: center; /* padrão centralizado */
+}
+
+
+/* Bloco de imagem com explicação */
+.bloco-imagem-explicacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 30px auto;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: rgba(144, 163, 174, 0.2); /* fundo tipo integração */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+.bloco-imagem-explicacao h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Conteúdo da imagem e explicação */
+.conteudo-imagem-explicacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap; /* responsivo */
+}
+
+/* Imagem menor */
+.imagem-container img {
+  width: 200px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.imagem-container img:hover {
+  transform: scale(1.05);
+}
+
+.explicacao-container {
+  flex: 1;
+  min-width: 180px;
+  font-size: 1.1em;
+  text-align: left;
+}
+
+/* Tema claro e escuro */
+.tema-bloco.light {
+  background-color: rgba(144, 163, 174, 0.2);
+}
+
+.tema-bloco.dark {
+  background-color: rgba(50, 50, 50, 0.7);
+  color: #fff;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+  .bloco-objetivo,
+  .blocos-integracao .bloco {
+    text-align: justify; 
+  }
+
+  .conteudo-imagem-explicacao {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .explicacao-container {
+    text-align: center;
+  }
+
+  .imagem-container img {
+    width: 70%; /* ocupa mais espaço em telas pequenas */
+  }
+}

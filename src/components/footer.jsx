@@ -12,18 +12,19 @@ const Footer = () => {
       <div className="footer-center">
         <h4>Tecnologias Utilizadas</h4>
         <ul>
-          <li>React</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>React Router</li>
+          <li>Esp32 Microcontroller</li>
+          <li>MQTT Protocol</li>
+          <li>Mosquitto Broker</li>
+          <li>Arduino IDE</li>
+          <li>Wokwi Simulador</li>
         </ul>
       </div>
 
       <div className="footer-right">
         <h4>Informações</h4>
-        <p>Email: contato@exemplo.com</p>
+        <p>Email: grupo5@gmail.com</p>
         <p>Telefone: (11) 99999-9999</p>
-        <p>Endereço: Rua Exemplo, 123</p>
+        <p>Endereço: Sesi Vinhedo / Senai Vinhedo 242</p>
       </div>
     </footer>
   );
