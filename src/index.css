@@ -1,5 +1,10 @@
-body{
-    margin: 0;
-    padding: auto;
-    font-family: 'Times New Roman', Times, serif;
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* impede que a página tenha rolagem lateral */
+  width: 100%;
 }
