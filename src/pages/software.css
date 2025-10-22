@@ -1,4 +1,4 @@
-/* ====== Container principal isolado ====== */
+/* ====== Container principal ====== */
 .arduino-page {
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@
   width: 80%;
   max-width: 900px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   padding: 24px;
   transition: all 0.3s ease;
 }
@@ -30,11 +30,11 @@
 
 /* ====== Cores das seções ====== */
 .ide-arduino {
-  background-color: rgba(134, 164, 171, 0.546);
+  background-color: rgba(40, 171, 200, 0.2);
 }
 
 .config-ide {
-  background-color: rgba(213, 233, 237, 0.884);
+  background-color: rgba(211, 212, 212, 0.2);
 }
 
 .board-porta {
@@ -52,7 +52,7 @@
 
 .bloquinho1,
 .bloquinho2 {
-  background-color: rgba(255, 255, 255, 0.386);
+  background-color: rgba(255, 255, 255, 0.2);
   padding: 10px;
   border-radius: 8px;
   width: 40%;
@@ -61,7 +61,6 @@
 
 /* ====== Listas ====== */
 .section ol {
-  color: #333;
   margin-left: 20px;
 }
 
@@ -105,22 +104,24 @@
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   position: relative;
   padding: 4%;
-  overflow-x: auto; /* rolagem horizontal para códigos longos */
+  overflow-x: auto;
 }
 
+/* ====== Botão Copiar Código ====== */
 .arduino-page .codigo-box button {
-  background-color: #508c96;
-  color: white;
-  border: none;
+  background-color: rgba(80, 140, 150, 0.2);
+  border: 1px solid rgba(80, 140, 150, 0.4);
+  color: inherit;
   border-radius: 6px;
-  padding: 8px 14px;
-  font-size: 0.95rem;
+  padding: 6px 12px;
   cursor: pointer;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
   transition: 0.3s ease;
 }
 
 .arduino-page .codigo-box button:hover {
-  background-color: #3e7179;
+  background-color: rgba(80, 140, 150, 0.3);
 }
 
 /* ====== Texto de rodapé do bloco ====== */
@@ -137,15 +138,22 @@
   text-decoration: underline;
 }
 
-/* ====== Links longos (como o JSON do ESP32) ====== */
+/* ====== Código dentro do box ====== */
+.arduino-page .codigo-box code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+}
+
+/* ====== Links longos ====== */
 .code-link {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.2);
   padding: 8px 10px;
   border-radius: 6px;
-  overflow-x: auto; /* rolagem se for muito longo */
-  max-width: 100%; /* nunca ultrapassa o bloco */
-  word-wrap: break-word; /* quebra linha se necessário */
-  white-space: pre-wrap; /* permite quebrar linhas longas */
+  overflow-x: auto;
+  max-width: 100%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .code-link code {
@@ -154,8 +162,6 @@
 }
 
 /* ====== Responsividade ====== */
-
-/* Telas médias (tablets) */
 @media (max-width: 900px) {
   .section {
     width: 90%;

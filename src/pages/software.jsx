@@ -1,78 +1,8 @@
 import './software.css';
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function Software() {
-  return (
-    <div className="arduino-page">
-
-      <div className="section ide-arduino">
-        <h2>IDE Arduino</h2>
-        <p>
-          A IDE Arduino (Integrated Development Environment) é uma plataforma de desenvolvimento de código aberto que facilita a programação de microcontroladores. Utilizamos a IDE Arduino para desenvolver o código que controla o ESP32 e gerencia todos os componentes do projeto.
-        </p>
-        <h3>Por que usar a IDE Arduino?</h3>
-        <ul className='lista'>
-          <li>Interface simples e intuitiva</li>
-          <li>Grande quantidade de bibliotecas disponíveis</li>
-          <li>Comunidade ativa e vasta documentação</li>
-          <li>Suporte para ESP32 através de pacotes adicionais</li>
-          <li>Compilação e upload simplificados</li>
-        </ul>
-      </div>
-
-      {/* Seção Configuração da IDE */}
-      <div className="section config-ide">
-        <h2>Configuração da IDE</h2>
-        <ol>
-          <li>
-            <strong>Instalação do Suporte ao ESP32:</strong> Em <strong>Arquivo → Preferências</strong>, adicione a URL do gerenciador de placas ESP32: <br />
-           <pre className="code-link">
-  <code>https://dl.espressif.com/dl/package_esp32_index.json</code>
-</pre>
-
-          </li>
-          <li>
-            <strong>Instalação da Placa ESP32:</strong> Acesse <strong>Ferramentas → Placa → Gerenciador de Placas</strong>, busque por "ESP32" e instale o pacote <strong>esp32 by Espressif Systems</strong>.
-          </li>
-          <li>
-            <strong>Instalação de Bibliotecas:</strong> Acesse <strong>Sketch → Incluir Biblioteca → Gerenciar Bibliotecas</strong> e instale:
-            <ul>
-              <li>DHT sensor library - Para o sensor DHT11</li>
-              <li>PubSubClient - Para comunicação MQTT</li>
-              <li>WiFi - Para conexão Wi-Fi (já incluída no pacote ESP32)</li>
-            </ul>
-          </li>
-        </ol>
-      </div>
-
-      {/* Seção Seleção de Board e Porta */}
-      <div className="section board-porta">
-        <h2>Seleção de Board e Porta</h2>
-        <div className='bloquinhos'>
-        <div className='bloquinho1'>
-        <h3>Board (Placa)</h3>
-        <p>
-          Vá em <strong>Ferramentas → Placa</strong> e selecione:
-        </p>
-        <p className="highlight">ESP32 Dev Module</p>
-        <p>Esta é a configuração padrão para a maioria das placas ESP32.</p>
-        </div>
-        <div className='bloquinho2'>
-        <h3>Porta Serial</h3>
-        <p>
-          Conecte o ESP32 via USB e selecione em <strong>Ferramentas → Porta</strong>:
-        </p>
-        <p className="highlight">COM3, COM4... (Windows)</p>
-        </div>
-        </div>
-      </div>
-
-      {/* Seção Código Fonte */}
-      <div className="codigo-fonte">
-        <h1>CÓDIGO FONTE</h1>
-        <div className="codigo-box">
-          <pre>
-            <code>{`#include <WiFi.h>
+  const codigo = `#include <WiFi.h>
 #include <PubSubClient.h>
 #include <DHT.h>
 
@@ -241,7 +171,88 @@ void loop() {
     Serial.println("---------------------------------");
   }
 }
-`}</code>
+`;
+
+  const [copiado, setCopiado] = useState(false);
+
+  const copiarCodigo = () => {
+    navigator.clipboard.writeText(codigo);
+    setCopiado(true);
+    setTimeout(() => setCopiado(false), 2000);
+  };
+
+  return (
+    <div className="arduino-page">
+           <div className="section ide-arduino">
+        <h2>IDE Arduino</h2>
+        <p>
+          A IDE Arduino (Integrated Development Environment) é uma plataforma de desenvolvimento de código aberto que facilita a programação de microcontroladores. Utilizamos a IDE Arduino para desenvolver o código que controla o ESP32 e gerencia todos os componentes do projeto.
+        </p>
+        <h3>Por que usar a IDE Arduino?</h3>
+        <ul className='lista'>
+          <li>Interface simples e intuitiva</li>
+          <li>Grande quantidade de bibliotecas disponíveis</li>
+          <li>Comunidade ativa e vasta documentação</li>
+          <li>Suporte para ESP32 através de pacotes adicionais</li>
+          <li>Compilação e upload simplificados</li>
+        </ul>
+      </div>
+
+      {/* Seção Configuração da IDE */}
+      <div className="section config-ide">
+        <h2>Configuração da IDE</h2>
+        <ol>
+          <li>
+            <strong>Instalação do Suporte ao ESP32:</strong> Em <strong>Arquivo → Preferências</strong>, adicione a URL do gerenciador de placas ESP32: <br />
+           <pre className="code-link">
+  <code>https://dl.espressif.com/dl/package_esp32_index.json</code>
+</pre>
+
+          </li>
+          <li>
+            <strong>Instalação da Placa ESP32:</strong> Acesse <strong>Ferramentas → Placa → Gerenciador de Placas</strong>, busque por "ESP32" e instale o pacote <strong>esp32 by Espressif Systems</strong>.
+          </li>
+          <li>
+            <strong>Instalação de Bibliotecas:</strong> Acesse <strong>Sketch → Incluir Biblioteca → Gerenciar Bibliotecas</strong> e instale:
+            <ul>
+              <li>DHT sensor library - Para o sensor DHT11</li>
+              <li>PubSubClient - Para comunicação MQTT</li>
+              <li>WiFi - Para conexão Wi-Fi (já incluída no pacote ESP32)</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      {/* Seção Seleção de Board e Porta */}
+      <div className="section board-porta">
+        <h2>Seleção de Board e Porta</h2>
+        <div className='bloquinhos'>
+        <div className='bloquinho1'>
+        <h3>Board (Placa)</h3>
+        <p>
+          Vá em <strong>Ferramentas → Placa</strong> e selecione:
+        </p>
+        <p className="highlight">ESP32 Dev Module</p>
+        <p>Esta é a configuração padrão para a maioria das placas ESP32.</p>
+        </div>
+        <div className='bloquinho2'>
+        <h3>Porta Serial</h3>
+        <p>
+          Conecte o ESP32 via USB e selecione em <strong>Ferramentas → Porta</strong>:
+        </p>
+        <p className="highlight">COM3, COM4... (Windows)</p>
+        </div>
+        </div>
+      </div>
+
+      <div className="codigo-fonte">
+        <h1>CÓDIGO FONTE</h1>
+        <div className="codigo-box">
+          <button onClick={copiarCodigo}>
+            {copiado ? "✅ Copiado!" : "📋 Copiar código"}
+          </button>
+          <pre>
+            <code>{codigo}</code>
           </pre>
         </div>
       </div>
