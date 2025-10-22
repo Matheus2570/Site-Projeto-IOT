@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css";
+import "./footer.css";
 import logo from "../assets/FotoDoGrupo.jpeg"; // coloque o caminho da sua logo aqui
 
 const Footer = () => {
