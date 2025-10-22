@@ -1,6 +1,6 @@
 import React from "react";
 import ImagemWokwi from "../assets/imagemIlustrativaWokwi.jpeg";
-import './SimulacaoWokwi.css';
+import './simulacaoWokwi.css';
 
 function SimulacaoWokwi() {
   return (
