@@ -55,10 +55,7 @@ export default function PerguntasRespostas() {
 
   return (
     <main className="page">
-      <header className="header">
-        <h1 className="title">Perguntas e Respostas</h1>
-        <p className="subtitle">Clique na pergunta ou na seta para ver a resposta</p>
-      </header>
+      
 
       <section className="grid">
         {cards.map(card => (
