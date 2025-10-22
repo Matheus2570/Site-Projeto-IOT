@@ -3,7 +3,7 @@ import ImagemWokwi from "../assets/imagemIlustrativaWokwi.jpeg";
 
 function SimulacaoWokwi() {
   return (
-    <div style={{ fontFamily: "Arial, sans-serif", backgroundColor: "#e5e5e5" }}>
+    <div style={{ fontFamily: "times", backgroundColor: "#e5e5e5" }}>
       {/* Cabeçalho */}
       
   {/* Seção do circuito */}
