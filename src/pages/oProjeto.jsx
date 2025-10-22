@@ -6,8 +6,6 @@ import Capivara from "../assets/CapivaraEstimacao.jpeg";
 function OProjeto() {
   return (
     <div className="o-projeto">
-      <h2>O Projeto</h2>
-
       {/* Problema e Solução */}
       <section className="problema-solucao">
         <div className="problema">
