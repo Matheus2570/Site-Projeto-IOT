@@ -1,5 +1,5 @@
 import React from "react";
-import './Hardware.css';
+import './hardware.css';
 
 // Import das imagens
 import ImgDHT11 from "../assets/Imagemdht11.png";
