@@ -13,13 +13,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 55px;
+  gap: 90px;
 }
 
 /* Cada card (membro) */
 .equipe-card {
   flex: 1 1 300px;
-  max-width: 320px;
+  max-width: 370px;
   background-color: rgba(144, 163, 174, 0.2);
   padding: 20px;
   border-radius: 16px;
