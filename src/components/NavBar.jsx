@@ -1,4 +1,3 @@
-// components/NavBar.jsx
 import { Link, useLocation } from "react-router-dom"; 
 import { useState } from "react"; 
 import "./NavBar.css"; 
@@ -7,6 +6,7 @@ import BotaoMudarTema from "./botaoMudaTema";
 export default function NavBar() {
   const [menuAberto, setMenuAberto] = useState(false);
   const location = useLocation(); // pega a rota atual
+  const [mostrarIframe, setMostrarIframe] = useState(false);
 
   const alternarMenu = () => setMenuAberto(!menuAberto);
   const handleClick = () => setMenuAberto(false);
@@ -14,7 +14,7 @@ export default function NavBar() {
   // Map de rotas para títulos
   const titulos = {
     "/": "Página Principal",
-     "/o-projeto": "O Projeto",
+    "/o-projeto": "O Projeto",
     "/simulacao-wokwi": "Simulação Wokwi",
     "/hardware": "Hardware",
     "/software": "Software",
@@ -26,33 +26,56 @@ export default function NavBar() {
   const tituloAtual = titulos[location.pathname] || "Estação Meterológica";
 
   return (
-    <nav className="navBar">
-      <div className="navTopo">
-        <h1 className="tituloSite">{tituloAtual}</h1>
-        <div className="tituloComBotao">
-          <i
-            className={menuAberto ? "bx bx-menu-alt-right" : "bx bx-menu"}
-            onClick={alternarMenu}
-            style={{ cursor: "pointer" }}
-          ></i>
-          <BotaoMudarTema />
+    <>
+      <nav className="navBar">
+        <div className="navTopo">
+          <h1 className="tituloSite">{tituloAtual}</h1>
+          <div className="tituloComBotao">
+            <i
+              className={menuAberto ? "bx bx-menu-alt-right" : "bx bx-menu"}
+              onClick={alternarMenu}
+              style={{ cursor: "pointer" }}
+            ></i>
+            <BotaoMudarTema />
+          </div>
         </div>
-      </div>
 
-      {menuAberto && (
-        <div id="menu-opcoes" className="menu-opcoes">
-          <ul>
-            <li><Link to="/" onClick={handleClick} className="navLink">🏠 Página Principal</Link></li>
-            <li><Link to="/o-projeto" onClick={handleClick} className="navLink">📄 O Projeto</Link></li>
-            <li><Link to="/simulacao-wokwi" onClick={handleClick} className="navLink">🖥 Simulação Wokwi</Link></li>
-            <li><Link to="/hardware" onClick={handleClick} className="navLink">🔧 Hardware</Link></li>
-            <li><Link to="/software" onClick={handleClick} className="navLink">💾 Software</Link></li>
-            <li><Link to="/perguntas-respostas" onClick={handleClick} className="navLink">❓ Perguntas e Respostas</Link></li>
-            <li><Link to="/resultados" onClick={handleClick} className="navLink">📊 Resultados</Link></li>
-            <li><Link to="/equipe" onClick={handleClick} className="navLink">👥 Equipe</Link></li>
-          </ul>
-        </div>
-      )}
-    </nav>
+        {menuAberto && (
+          <div id="menu-opcoes" className="menu-opcoes">
+            <ul>
+              <li><Link to="/" onClick={handleClick} className="navLink">🏠 Página Principal</Link></li>
+              <li><Link to="/o-projeto" onClick={handleClick} className="navLink">📄 O Projeto</Link></li>
+              <li><Link to="/simulacao-wokwi" onClick={handleClick} className="navLink">🖥 Simulação Wokwi</Link></li>
+              <li><Link to="/hardware" onClick={handleClick} className="navLink">🔧 Hardware</Link></li>
+              <li><Link to="/software" onClick={handleClick} className="navLink">💾 Software</Link></li>
+              <li><Link to="/perguntas-respostas" onClick={handleClick} className="navLink">❓ Perguntas e Respostas</Link></li>
+              <li><Link to="/resultados" onClick={handleClick} className="navLink">📊 Resultados</Link></li>
+              <li><Link to="/equipe" onClick={handleClick} className="navLink">👥 Equipe</Link></li>
+            </ul>
+          </div>
+        )}
+      </nav>
+
+      {/* Easter Egg do MyInstants */}
+      <div className="easter-egg-container">
+        <button 
+          className="easter-egg-btn" 
+          onClick={() => setMostrarIframe(!mostrarIframe)}
+        >
+          🔊
+        </button>
+
+        {mostrarIframe && (
+          <iframe
+            src="https://www.myinstants.com/instant/popular-the-weekend-56170/embed/"
+            frameBorder="0"
+            scrolling="no"
+            title="Popular The Weekend"
+            width="110"
+            height="50"
+          ></iframe>
+        )}
+      </div>
+    </>
   );
 }
