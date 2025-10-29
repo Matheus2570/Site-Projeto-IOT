@@ -1,11 +1,12 @@
 import React from "react";
 import './hardware.css';
-
-// Import das imagens
 import ImgDHT11 from "../assets/Imagemdht11.png";
 import ImgESP32 from "../assets/imagemesp32.png";
 import ImgMQ135 from "../assets/mq135.png";
 import ImgLED from "../assets/ledImagem.png";
+import ImgProtoboard from "../assets/protoBoard.jpeg";
+import ImgJumpers from "../assets/jumpers.jpeg";
+import ImgUSB from "../assets/usb.jpeg";
 
 function Hardware() {
   const cards = [
@@ -60,6 +61,40 @@ function Hardware() {
         "Resistores: 220Ω a 330Ω",
         "Feedback visual rápido",
         "Longa vida útil (50.000+ horas)"
+      ]
+    },
+    {
+      title: "Protoboard",
+      img: ImgProtoboard,
+      text: [
+        "Base para montagem de circuitos eletrônicos sem solda",
+        "Facilita testes e prototipagem de projetos",
+        "Linhas de alimentação e colunas de conexão",
+        "Compatível com componentes e módulos padrão",
+        "Material isolante e resistente ao calor",
+        "Tamanho comum: 830 pontos de conexão"
+      ]
+    },
+    {
+      title: "Jumpers",
+      img: ImgJumpers,
+      text: [
+        "Cabos usados para conexões na protoboard",
+        "Tipos: macho-macho, macho-fêmea, fêmea-fêmea",
+        "Tamanhos variados (10 a 30 cm)",
+        "Fios flexíveis e reutilizáveis",
+        "Facilitam conexões entre sensores, módulos e microcontroladores"
+      ]
+    },
+    {
+      title: "Cabo USB",
+      img: ImgUSB,
+      text: [
+        "Usado para conexão e alimentação do ESP32",
+        "Padrão: USB Tipo A para Micro USB / Tipo C",
+        "Permite gravação e comunicação serial",
+        "Fornece energia de 5V",
+        "Conexão estável entre computador e placa"
       ]
     }
   ];
