@@ -26,36 +26,42 @@ function Home() {
       <div className="integracao-multidisciplinar">
         <h2>🔗 Integração Multidisciplinar</h2>
         <div className="blocos-integracao">
-          <div className="bloco">💻 Sistemas Operacionais: Gerenciamento de processos e multitarefas no ESP32</div>
-          <div className="bloco">🌐 Arquitetura de Redes e IoT: Protocolo MQTT e comunicação via Wi-Fi</div>
-          <div className="bloco">🧠 Lógica de Programação: Algoritmos de leitura e processamento de dados</div>
-          <div className="bloco">📝 Levantamento de Requisitos: Análise e especificações do sistema IoT</div>
+          <div className="bloco">
+            💻 Sistemas Operacionais: Gerenciamento de processos e multitarefas no ESP32
+          </div>
+          <div className="bloco">
+            🌐 Arquitetura de Redes e IoT: Protocolo MQTT e comunicação via Wi-Fi
+          </div>
+          <div className="bloco">
+            🧠 Lógica de Programação: Algoritmos de leitura e processamento de dados
+          </div>
+          <div className="bloco">
+            📝 Levantamento de Requisitos: Análise e especificações do sistema IoT
+          </div>
         </div>
       </div>
 
-  <div className="bloco-imagem-explicacao tema-bloco">
-  <h2>📸 Foto da Estação Meteorológica</h2>
-  <div className="conteudo-imagem-explicacao">
-    <div className="imagem-container">
-      <img src={EstacaoMeterologica} alt="Estação Meteorológica" />
-    </div>
-    <div className="explicacao-container">
-      <p>
-        <p>
-  Nessa foto, todos os 3 LEDs do projeto estão acesos: 🔴 Umidade, 🟢 Temperatura e 🟡 Gás. 
-  Utilizamos um papel queimado para simular o aumento de temperatura e gás, demonstrando como 
-  os sensores detectam mudanças ambientais em tempo real. O microcontrolador ESP32 processa 
-  os dados recebidos dos sensores e aciona os LEDs conforme os valores medidos. 
-  Essa demonstração mostra de forma prática a integração entre sensores, hardware e software, 
-  reforçando o caráter educativo do projeto e a aplicação da estação meteorológica para monitoramento ambiental.
-</p>
+      {/* Imagem + Explicação */}
+      <div className="bloco-imagem-explicacao tema-bloco">
+        <h2>📸 Foto da Estação Meteorológica</h2>
+        <div className="conteudo-imagem-explicacao">
+          <div className="imagem-container">
+            <img src={EstacaoMeterologica} alt="Estação Meteorológica" />
+          </div>
 
-      </p>
-    </div>
-  </div>
-</div>
+          <div className="explicacao-container">
+            <p>
+              Nessa foto, todos os 3 LEDs do projeto estão acesos: 🔴 Umidade, 🟢 Temperatura e 🟡 Gás.
+              Utilizamos um papel queimado para simular o aumento de temperatura e gás, demonstrando como
+              os sensores detectam mudanças ambientais em tempo real. O microcontrolador ESP32 processa
+              os dados recebidos dos sensores e aciona os LEDs conforme os valores medidos.
+              Essa demonstração mostra de forma prática a integração entre sensores, hardware e software,
+              reforçando o caráter educativo do projeto e a aplicação da estação meteorológica para monitoramento ambiental.
+            </p>
+          </div>
 
-
+        </div>
+      </div>
 
     </div>
   );
