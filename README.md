@@ -120,10 +120,6 @@ O objetivo foi criar uma **estação meteorológica inteligente** utilizando o *
 
 ---
 
-## 🌐 Acesse o Projeto
 
-🔗 [Projeto Online na Vercel](https://seu-projeto.vercel.app)
-
----
 
 © 2025 — Equipe Estação Meteorológica IoT
